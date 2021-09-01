@@ -1,0 +1,83 @@
+<html xmlns="http://www.uis.edu.co" lang="es" xml:lang="es">
+<he ad>
+
+<link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" 
+integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" 
+crossorigin="anonymous">
+
+<title>Complete los Siguientes Datos</title>
+</head>
+
+<style>
+    body {background-color: rgb(172, 126, 179);}
+    h1   {color: blue;}
+</style>
+
+<body>
+    
+    <h3 style="margin-left: 30;">
+    <br/>Llene el siguiente formulario<br/>  
+    </h3>
+
+    <p style="margin-left: 30;">
+    <br/>Las casillas marcadas con un * son requeridas.<br/>
+    </p>
+
+    <form class="pure-form pure-form-aligned">
+        <fieldset>
+            <div class="pure-control-group">
+                <label for="aligned-name">Nombre</label>
+                <input type="text" id="aligned-name" placeholder="Nombre" maxlength="25"/>
+                <span class="pure-form-message-inline"></span>
+            </div>
+            <div class="pure-control-group">
+                <label for="aligned-name">Apellido</label>
+                <input type="text" id="aligned-name" placeholder="Apellido" maxlength="25"/>
+                <span class="pure-form-message-inline"></span>
+            </div>
+
+            <div class="pure-control-group">
+                <label for="aligned-name">Username</label>
+                <input type="text" id="aligned-name" placeholder="Username" required="" maxlength="20"/>
+                <span class="pure-form-message-inline">*</span>
+            </div>
+            <div class="pure-control-group">
+                <label for="aligned-password">Password</label>
+                <input type="password" id="aligned-password" placeholder="Password" required=""/>
+                <span class="pure-form-message-inline">*</span>
+            </div>
+            <div class="pure-control-group">
+                <label for="aligned-email">Correo electr&oacute;nico</label>
+                <input type="email" id="aligned-email" placeholder="Correo electr&oacute;nico" required="" maxlength="120"/>
+                <span class="pure-form-message-inline">*</span>
+            </div>
+            <div class="pure-control-group">
+                <label for="aligned-direccion">Direcci&oacute;n</label>
+                <input type="text" id="aligned-direccion" placeholder="Direcci&oacute;n"/>
+                <span class="pure-form-message-inline"></span>
+            </div>
+            <div class="pure-control-group">
+                <label for="aligned-telefono">Tel&eacute;fono</label>
+                <input type="text" id="aligned-telefono" placeholder="Tel&eacute;fono" maxlength="20"/>
+                <span class="pure-form-message-inline"></span>
+            </div>
+            <div class="pure-control-group">
+                <label for="pais">Pa&iacute;s</label>
+                <select id="pais">
+                    <option>Colombia</option>
+                    <option>Estados Unidos</option>
+                    <option>Chile</option>
+                </select>
+            </div>
+            <div class="pure-controls">
+                <label for="aligned-cb" class="pure-checkbox">
+                    <input type="checkbox" id="aligned-cb" /> He leido los terminos y condiciones
+                </label>
+                <button type="submit" class="pure-button pure-button-primary">Submit</button>
+            </div>
+        </fieldset>
+    </form>    
+
+
+</body>
+</html>
