@@ -66,56 +66,68 @@ crossorigin="anonymous">
                 </select>
             </div>
             <div class="pure-control-group">
-                <label for="id_user">Marca</label>
-                <select id="id_user">
-                    <option>Mazda</option>
-                    <option>Ford</option>
-                    <option>BMW</option>
-                </select>
-            </div>
-            <div class="pure-control-group">
-                <label for="aligned-name">Modelo</label>
-                <input type="text" id="aligned-name" placeholder="Modelo" maxlength="25"/>
-                <span class="pure-form-message-inline"></span>
-            </div>
-            <div class="pure-control-group">
-                <label for="aligned-name">Anio</label>
-                <input type="text" id="aligned-name" placeholder="Anio" maxlength="25"/>
-                <span class="pure-form-message-inline"></span>
-            </div>
-            <div class="pure-control-group">
-                <label for="aligned-name">Detalle</label>
-                <input type="text" id="aligned-name" placeholder="Detalle" required="" maxlength="20"/>
+                <label for="id_user">Cedula</label>
+                <input type="number" id="id_user" placeholder="Cedula" maxlength="11" required=""/>
                 <span class="pure-form-message-inline">*</span>
             </div>
             <div class="pure-control-group">
-                <label for="aligned-password">Caja</label>
-                <input type="password" id="aligned-password" placeholder="Caja" required=""/>
+                <label for="modelo">Modelo</label>
+                <input type="text" id="modelo" placeholder="Modelo" maxlength="60" required=""/>
                 <span class="pure-form-message-inline">*</span>
             </div>
             <div class="pure-control-group">
-                <label for="aligned-email">Motor</label>
-                <input type="email" id="aligned-email" placeholder="Motor" required="" maxlength="120"/>
+                <label for="anio">A&ntilde;o</label>
+                <input type="text" id="anio" placeholder="A&ntilde;o" maxlength="4" required=""/>
                 <span class="pure-form-message-inline">*</span>
             </div>
             <div class="pure-control-group">
-                <label for="aligned-direccion">Fecha Publicacion</label>
-                <input type="text" id="aligned-direccion" placeholder="Fecha Publicacion"/>
+                <label for="detalle">Detalle</label>
+                <input type="text" id="detalle" placeholder="Detalle" required=""/>
+                <span class="pure-form-message-inline">*</span>
+            </div>
+            <div class="pure-control-group">
+                <label for="caja">Caja</label>
+                <input type="number" id="caja" placeholder="Caja" required=""/>
+                <span class="pure-form-message-inline">*</span>
+            </div>
+            <div class="pure-control-group">
+                <label for="motor">Motor</label>
+                <input type="number" id="motor" placeholder="Motor" required="" step="0.01" min="0" max="10"/>
+                <span class="pure-form-message-inline">*</span>
+            </div>
+            <div class="pure-control-group">
+                <label for="fechapub">Fecha Publicacion</label>
+                <input type="date" id="fechapub" placeholder="Fecha Publicacion" required=""/>
+                <span class="pure-form-message-inline">*</span>
+            </div>
+            <div class="pure-control-group">
+                <label for="precio">Precio</label>
+                <input type="number" id="precio" placeholder="Precio" maxlength="10" required=""/>
+                <span class="pure-form-message-inline">*</span>
+            </div>
+            <div class="pure-control-group">
+                <label for="moneda">Moneda</label>
+                <input type="text" id="moneda" placeholder="Moneda" maxlength="3" required=""/>
+                <span class="pure-form-message-inline">*</span>
+            </div>
+            <div class="pure-control-group">
+                <label for="cc_pic01">Descripcion 1</label>
+                <textarea id="cc_pic01" rows="5" cols="70" placeholder="Requerida" maxlength="85" required=""></textarea>
+                <span class="pure-form-message-inline">*</span>
+            </div>
+            <div class="pure-control-group">
+                <label for="cc_pic02">Descripcion 2</label>
+                <textarea id="cc_pic02" rows="5" cols="70" placeholder="Opcional" maxlength="85"></textarea>
+                <span class="pure-form-message-inline"></span>
+            </div>
+            <div textarea class="pure-control-group">
+                <label for="cc_pic03">Descripcion 3</label>
+                <textarea id="cc_pic03" rows="5" cols="70" placeholder="Opcional" maxlength="85"></textarea>
                 <span class="pure-form-message-inline"></span>
             </div>
             <div class="pure-control-group">
-                <label for="aligned-telefono">Precio</label>
-                <input type="text" id="aligned-telefono" placeholder="Tel&eacute;fono" maxlength="20"/>
-                <span class="pure-form-message-inline"></span>
-            </div>
-            <div class="pure-control-group">
-                <label for="aligned-telefono">Moneda</label>
-                <input type="text" id="aligned-telefono" placeholder="Moneda" maxlength="20"/>
-                <span class="pure-form-message-inline"></span>
-            </div>
-            <div class="pure-control-group">
-                <label for="cc_pic">Descripcion</label>
-                <input type="text" id="cc_pic" placeholder="Descripcion" maxlength="20"/>
+                <label for="cc_destac">Destacado</label>
+                <input type="text" id="cc_destac" placeholder="Destacado" maxlength="2"/>
                 <span class="pure-form-message-inline"></span>
             </div>
             <div class="pure-controls">
