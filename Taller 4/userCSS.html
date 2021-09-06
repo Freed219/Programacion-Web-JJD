@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns="http://www.uis.edu.co" lang="es" xml:lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Complete los Siguientes Datos</title>
+</head>
+
+<style type="text/css">
+    body {background-color: rgb(172, 126, 179); font-family: sans-serif; font-size: 18px;}
+    h3,p {margin-left: 30px;}
+    .datos{ margin: 8px; height: 33px; width: 250px; border-radius: 5px; border-color: white; }
+    .label{	padding-left: 40px;}
+    #boton{ margin-left: 40px;background-color: #5F9FC8; color: #FFFFFF;width: 80px;}
+</style>
+
+<body>
+	<h3> Llene el siguiente formulario </h3>
+    <p> Las casillas marcadas con un * son requeridas.</p>
+
+    <form style="width: 600px; padding-left: 50px;">
+    	<div>
+    		<label class="label">Nombre:</label>
+    		<input class="datos" type="text" name="Nombre" id="Nombre" placeholder="Nombre">
+    	</div>
+    	<div>
+    		<label class="label">Apellido:</label>
+    		<input class="datos" type="text" name="Apellido" id="Apellido" placeholder="Apellido">
+    	</div>
+    	<div>
+    		<label class="label">Username:</label>
+    		<input class="datos" type="text" name="Username" id="Username" placeholder="Username" required="">
+    		<span>*</span>
+    	</div>
+    	<div>
+    		<label class="label">Password:</label>
+    		<input class="datos" type="password" name="Password" id="Password" placeholder="Password" required="">
+    		<span>*</span>
+    	</div>
+    	<div>
+    		<label class="label">Correo electronico:</label>
+    		<input class="datos" type="email" name="Correo electronico" id="Correo electronico" placeholder="Correo electronico" required="">
+    		<span>*</span>
+    	</div>
+    	<div>
+    		<label class="label">Direccion:</label>
+    		<input class="datos" type="text" name="Direccion" id="Direccion" placeholder="Direccion">
+    	</div>
+    	<div>
+    		<label class="label">Telefono:</label>
+    		<input class="datos" type="text" name="Telefono" id="Telefono" placeholder="Telefono">
+    	</div>
+        <div>
+            <label class="label">Pais:</label>
+            <select class="datos">
+                <option>Colombia</option>
+                <option>Estados Unidos</option>
+                <option>Chile</option>
+            </select>
+        </div>
+        <div>           
+            <label class="label"><input type="checkbox"/>He leido los terminos y condiciones.</label>
+        </div>
+        <button type="submit" class="datos" id="boton">Enviar</button>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns="http://www.uis.edu.co" lang="es" xml:lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Complete los Siguientes Datos</title>
+</head>
+
+<style type="text/css">
+	body {background-color: rgb(172, 126, 179); font-family: sans-serif; font-size: 18px;}
+	.label{	padding-left: 40px;}
+	.datos{ margin: 8px; height: 33px; width: 250px; border-radius: 5px; border-color: white; }
+	 #boton{ margin-left: 40px;background-color: #5F9FC8; color: #FFFFFF;width: 80px;}
+</style>
+<body>
+	<h3> Llene el siguiente formulario </h3>
+    <p> Las casillas marcadas con un * son requeridas.</p>
+
+    <form style="width: 500px; padding-left: 50px;">
+    	<div>
+            <label class="label">Pais:</label>
+            <select class="datos">
+                <option>Colombia</option>
+                <option>Estados Unidos</option>
+                <option>Chile</option>
+            </select>
+        </div>
+        <div>
+            <label class="label">Combustible:</label>
+            <select class="datos">
+                <option>Gasolina</option>
+                <option>Diesel</option>
+                <option>Electrico</option>
+            </select>
+        </div>
+        <div>
+            <label class="label">Tipo:</label>
+            <select class="datos">
+                <option>Sedan</option>
+                <option>Deporte</option>
+                <option>Camioneta</option>
+            </select>
+        </div>
+        <div>
+            <label class="label">Estado:</label>
+            <select class="datos">
+                <option>Perfecto</option>
+                <option>Usado</option>
+                <option>Critico</option>
+            </select>
+        </div>
+        <div>
+            <label class="label">Marca:</label>
+            <select class="datos">
+                <option>Mazda</option>
+                <option>Ford</option>
+                <option>BMW</option>
+            </select>
+        </div>
+        <div>
+            <label class="label">Modelo:</label>
+            <input class="datos" type="text" placeholder="Modelo"/>
+        </div>
+        <div>
+            <label class="label">Año:</label>
+            <input class="datos" type="number" placeholder="Año"/ required=""/>
+        </div>
+        <div>
+            <label class="label">Detalles:</label>
+            <input class="datos" type="text" placeholder="Detalle" required=""/>
+        </div>
+        <div>
+            <label class="label">Caja:</label>
+            <input class="datos" type="text" placeholder="Caja">
+        </div>
+        <div>
+            <label class="label">Motor:</label>
+            <input class="datos" type="number" placeholder="Motor"/>
+        </div>
+        <div>
+            <label class="label">Fecha Publicacion:</label>
+            <input class="datos" type="text" placeholder="Fecha Publicacion"/>
+        </div>
+        <div>
+            <label class="label">Precio:</label>
+            <input class="datos" type="number" placeholder="Telefono"/>
+        </div>
+        <div>
+            <label class="label">Moneda:</label>
+            <input class="datos" type="text" placeholder="Moneda"/>
+        </div>
+        <div>
+            <label class="label">Descripcion:</label>
+            <input class="datos" type="text" placeholder="Descripcion"/>
+        </div>
+        <div>
+            <label class="label"><input type="checkbox"/>He leido los terminos y condiciones.</label>
+        </div>
+        <button type="submit" class="datos" id="boton">Enviar</button>
+    </form>
+</body>
+</html>
