@@ -9,8 +9,58 @@ crossorigin="anonymous">
 </head>
 
 <style>
-    body {background-color: rgb(172, 126, 179);}
-    h1   {color: blue;}
+body {background-color: rgb(172, 126, 179);}
+
+h1   {color: blue;}
+
+/* Style the submit button */
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Style the container for inputs */
+.container {
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* The message box is shown when the user clicks on the password field */
+#message {
+  display:none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+#message p {
+  padding: 10px 35px;
+  font-size: 18px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: "&#10004;";
+}
+
+/* Add a red text color and an "x" icon when the requirements are wrong */
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: "&#10006;";
+} 
 </style>
 
 <body>
@@ -43,7 +93,7 @@ crossorigin="anonymous">
             </div>
             <div class="pure-control-group">
                 <label for="aligned-password">Password</label>
-                <input type="password" id="aligned-password" placeholder="Password" required=""/>
+                <input type="password" id="aligned-password" placeholder="Password" required="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"/>
                 <span class="pure-form-message-inline">*</span>
             </div>
             <div class="pure-control-group">
@@ -77,6 +127,14 @@ crossorigin="anonymous">
             </div>
         </fieldset>
     </form>    
+
+    <div id="message">
+        <h3>Password must contain the following:</h3>
+        <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+        <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+        <p id="number" class="invalid">A <b>number</b></p>
+        <p id="length" class="invalid">Minimum <b>15 characters</b></p>
+      </div>
 
 
 </body>
