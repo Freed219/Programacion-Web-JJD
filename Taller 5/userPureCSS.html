@@ -4,8 +4,8 @@
 <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" 
 integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" 
 crossorigin="anonymous">
-
 <title>Complete los Siguientes Datos</title>
+<script defer src='scriptpassword.js'></script>
 </head>
 
 <style>
@@ -23,9 +23,9 @@ crossorigin="anonymous">
     <br/>Las casillas marcadas con un * son requeridas.<br/>
     </p>
 
-    <form class="pure-form pure-form-aligned">
+    <form id='form' class="pure-form pure-form-aligned">
         <fieldset>
-            <div class="pure-control-group">
+            <div id="error" class="pure-control-group">
                 <label for="aligned-name">Nombre</label>
                 <input type="text" id="aligned-name" placeholder="Nombre" maxlength="25"/>
                 <span class="pure-form-message-inline"></span>
