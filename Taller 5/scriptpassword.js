@@ -1,23 +1,25 @@
-var myInput = document.getElementById("aligned-password");
+var InputPassword = document.getElementById("aligned-password");
+var InputConfirmarPassword = document.getElementById("aligned-confirmarpassword");
 var letter = document.getElementById("letter");
 var capital = document.getElementById("capital");
 var number = document.getElementById("number");
 var length = document.getElementById("length");
+var igual = document.getElementById("igual")
 
 // When the user clicks on the password field, show the message box
-myInput.onfocus = function() {
+InputPassword.onfocus = function() {
   document.getElementById("message").style.display = "block";
 }
 
 // When the user clicks outside of the password field, hide the message box
-myInput.onblur = function() {
+InputPassword.onblur = function() {
   document.getElementById("message").style.display = "none";
 }
 
-myInput.onkeyup = function() {
+InputPassword.onkeyup = function() {
     // Validate lowercase letters
     var lowerCaseLetters = /[a-z]/g;
-    if(myInput.value.match(lowerCaseLetters)) {
+    if(InputPassword.value.match(lowerCaseLetters)) {
       letter.classList.remove("invalid");
       letter.classList.add("valid");
     } else {
@@ -27,7 +29,7 @@ myInput.onkeyup = function() {
   
     // Validate capital letters
     var upperCaseLetters = /[A-Z]/g;
-    if(myInput.value.match(upperCaseLetters)) {
+    if(InputPassword.value.match(upperCaseLetters)) {
       capital.classList.remove("invalid");
       capital.classList.add("valid");
     } else {
@@ -37,7 +39,7 @@ myInput.onkeyup = function() {
   
     // Validate numbers
     var numbers = /[0-9]/g;
-    if(myInput.value.match(numbers)) {
+    if(InputPassword.value.match(numbers)) {
       number.classList.remove("invalid");
       number.classList.add("valid");
     } else {
@@ -46,11 +48,33 @@ myInput.onkeyup = function() {
     }
   
     // Validate length
-    if(myInput.value.length >= 15) {
+    if(InputPassword.value.length >= 15 && InputPassword.value.length <=20) {
       length.classList.remove("invalid");
       length.classList.add("valid");
-    } else {
+    }
+    else {
       length.classList.remove("valid");
       length.classList.add("invalid");
     }
   }
+
+InputConfirmarPassword.onfocus = function() {
+  document.getElementById("message2").style.display = "block";
+}
+
+// When the user clicks outside of the password field, hide the message box
+InputConfirmarPassword.onblur = function() {
+  document.getElementById("message2").style.display = "none";
+}
+
+InputConfirmarPassword.onkeyup = function() {
+  var pw1 = document.getElementById("aligned-password");
+  var pw2 = document.getElementById("aligned-confirmarpassword");
+  if(pw2 = pw1) {
+      igual.classList.remove("invalid");
+      igual.classList.add("valid");
+    } else {
+      igual.classList.remove("valid");
+      igual.classList.add("invalid");
+  }
+}

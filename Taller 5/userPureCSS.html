@@ -40,6 +40,20 @@ input[type=submit] {
   font-size: 18px;
 }
 
+#message2 {
+  display:none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+#message2 p {
+  padding: 10px 35px;
+  font-size: 18px;
+}
+
 /* Add a green text color and a checkmark when the requirements are right */
 .valid {
   color: green;
@@ -48,7 +62,7 @@ input[type=submit] {
 .valid:before {
   position: relative;
   left: -35px;
-  content: "&#10004;";
+  content: "✔";
 }
 
 /* Add a red text color and an "x" icon when the requirements are wrong */
@@ -59,7 +73,7 @@ input[type=submit] {
 .invalid:before {
   position: relative;
   left: -35px;
-  content: "&#10006;";
+  content: "✖";
 } 
 </style>
 
@@ -75,7 +89,7 @@ input[type=submit] {
 
     <form id='form' class="pure-form pure-form-aligned">
         <fieldset>
-            <div id="error" class="pure-control-group">
+            <div class="pure-control-group">
                 <label for="aligned-name">Nombre</label>
                 <input type="text" id="aligned-name" placeholder="Nombre" maxlength="25"/>
                 <span class="pure-form-message-inline"></span>
@@ -93,9 +107,14 @@ input[type=submit] {
             </div>
             <div class="pure-control-group">
                 <label for="aligned-password">Password</label>
-                <input type="password" id="aligned-password" placeholder="Password" required="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"/>
+                <input type="password" id="aligned-password" placeholder="Password" required="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" maxlength="20"/>
                 <span class="pure-form-message-inline">*</span>
             </div>
+            <div class="pure-control-group">
+              <label for="aligned-confirmarpassword">Confirmar password</label>
+              <input type="password" id="aligned-confirmarpassword" placeholder="Confirmar password" required="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" maxlength="20"/>
+              <span class="pure-form-message-inline">*</span>
+          </div>
             <div class="pure-control-group">
                 <label for="aligned-email">Correo electr&oacute;nico</label>
                 <input type="email" id="aligned-email" placeholder="Correo electr&oacute;nico" required="" maxlength="120"/>
@@ -129,12 +148,17 @@ input[type=submit] {
     </form>    
 
     <div id="message">
-        <h3>Password must contain the following:</h3>
-        <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
-        <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
-        <p id="number" class="invalid">A <b>number</b></p>
-        <p id="length" class="invalid">Minimum <b>15 characters</b></p>
+        <h3>La contraseña debe contener lo siguiente:</h3>
+        <p id="letter" class="invalid">Una letra <b>minuscula</b> </p>
+        <p id="capital" class="invalid">Una letra <b>mayuscula</b></p>
+        <p id="number" class="invalid">Un <b>numero</b></p>
+        <p id="length" class="invalid">Minimo <b>15 caracteres</b> y maximo <b>20 caracteres</b></p>
       </div>
+
+    <div id="message2">
+        <h3>La contraseña debe contener lo siguiente:</h3>
+        <p id="igual" class="invalid">La contrasena debe ser <b>Igual</b> a la anterior</p>
+    </div>
 
 
 </body>
