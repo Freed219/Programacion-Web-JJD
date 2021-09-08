@@ -4,7 +4,9 @@ var letter = document.getElementById("letter");
 var capital = document.getElementById("capital");
 var number = document.getElementById("number");
 var length = document.getElementById("length");
-var igual = document.getElementById("igual")
+var igual = document.getElementById("igual");
+var InputEmail = document.getElementById("aligned-email");
+var email = document.getElementById("email")
 
 // When the user clicks on the password field, show the message box
 InputPassword.onfocus = function() {
@@ -76,5 +78,25 @@ InputConfirmarPassword.onkeyup = function() {
     } else {
       igual.classList.remove("valid");
       igual.classList.add("invalid");
+  }
+}
+
+InputEmail.onfocus = function() {
+  document.getElementById("message3").style.display = "block";
+}
+
+// When the user clicks outside of the password field, hide the message box
+InputEmail.onblur = function() {
+  document.getElementById("message3").style.display = "none";
+}
+
+InputEmail.onkeyup = function() {
+  if(InputEmail.value.length <= 120) {
+    email.classList.remove("invalid");
+    email.classList.add("valid");
+  }
+  else {
+    email.classList.remove("valid");
+    email.classList.add("invalid");
   }
 }

@@ -54,6 +54,20 @@ input[type=submit] {
   font-size: 18px;
 }
 
+#message3 {
+  display:none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+#message3 p {
+  padding: 10px 35px;
+  font-size: 18px;
+}
+
 /* Add a green text color and a checkmark when the requirements are right */
 .valid {
   color: green;
@@ -117,7 +131,7 @@ input[type=submit] {
           </div>
             <div class="pure-control-group">
                 <label for="aligned-email">Correo electr&oacute;nico</label>
-                <input type="email" id="aligned-email" placeholder="Correo electr&oacute;nico" required="" maxlength="120"/>
+                <input type="email" id="aligned-email" placeholder="Correo electr&oacute;nico" required="" maxlength="130"/>
                 <span class="pure-form-message-inline">*</span>
             </div>
             <div class="pure-control-group">
@@ -146,20 +160,21 @@ input[type=submit] {
             </div>
         </fieldset>
     </form>    
-
     <div id="message">
         <h3>La contraseña debe contener lo siguiente:</h3>
         <p id="letter" class="invalid">Una letra <b>minuscula</b> </p>
         <p id="capital" class="invalid">Una letra <b>mayuscula</b></p>
         <p id="number" class="invalid">Un <b>numero</b></p>
         <p id="length" class="invalid">Minimo <b>15 caracteres</b> y maximo <b>20 caracteres</b></p>
-      </div>
-
+    </div>
     <div id="message2">
         <h3>La contraseña debe contener lo siguiente:</h3>
         <p id="igual" class="invalid">La contrasena debe ser <b>Igual</b> a la anterior</p>
     </div>
-
+    <div id="message3">
+        <h3>La contraseña debe contener lo siguiente:</h3>
+        <p id="email" class="invalid">El correo debe tener menos de <b>120 caracteres</b></p>
+    </div>
 
 </body>
 </html>
