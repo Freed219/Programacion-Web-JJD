@@ -6,6 +6,8 @@ integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aeh
 crossorigin="anonymous">
 <title>Complete los Siguientes Datos</title>
 <script defer src='scriptpassword.js'></script>
+<script defer src='scriptusername.js'></script>
+<script defer src='scriptdatos.js'></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Double Range Slider</title>
 <!--Google Fonts-->
@@ -74,6 +76,50 @@ input[type=submit] {
   font-size: 18px;
 }
 
+#message4 {
+  display:none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+#message4 p {
+  padding: 10px 35px;
+  font-size: 18px;
+}
+
+#message5 {
+  display:none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+#message5 p {
+  padding: 10px 35px;
+  font-size: 18px;
+}
+
+#message6 {
+  display:none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+#message6 p {
+  padding: 10px 35px;
+  font-size: 18px;
+}
+
+
+
 /* Add a green text color and a checkmark when the requirements are right */
 .valid {
   color: green;
@@ -116,13 +162,13 @@ input[type=submit] {
             </div>
             <div class="pure-control-group">
                 <label for="aligned-name">Apellido</label>
-                <input type="text" id="aligned-name" placeholder="Apellido" maxlength="25"/>
+                <input type="text" id="aligned-surname" placeholder="Apellido" maxlength="25"/>
                 <span class="pure-form-message-inline"></span>
             </div>
 
             <div class="pure-control-group">
                 <label for="aligned-name">Username</label>
-                <input type="text" id="aligned-name" placeholder="Username" required="" maxlength="20"/>
+                <input type="text" id="aligned-username" placeholder="Username" required="" maxlength="20"/>
                 <span class="pure-form-message-inline">*</span>
             </div>
             <div class="pure-control-group">
@@ -201,6 +247,19 @@ input[type=submit] {
         <h3>La contraseña debe contener lo siguiente:</h3>
         <p id="email" class="invalid">El correo debe tener menos de <b>120 caracteres</b></p>
     </div>
+    <div id="message4">
+        <h3>El nombre debe contener lo siguiente:</h3>
+        <p id="nombre" class="invalid">El nombre debe tener como maximo <b>25 caracteres</b></p>
+    </div>
+    <div id="message5">
+        <h3>El apellido debe contener lo siguiente:</h3>
+        <p id="apellido" class="invalid">El apellido debe tener como maximo <b>25 caracteres</b></p>
+    </div>
+    <div id="message6">
+        <h3>La direccion debe contener lo siguiente:</h3>
+        <p id="direccion" class="invalid">La direccion debe empezar con las siguientes palabras: <b>cll, cra, av, anv, trans</b></p>
+    </div>
+
 
 </body>
 </html>
