@@ -6,6 +6,12 @@ integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aeh
 crossorigin="anonymous">
 <title>Complete los Siguientes Datos</title>
 <script defer src='scriptpassword.js'></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Double Range Slider</title>
+<!--Google Fonts-->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+<!--Stylesheet-->
+<link rel="stylesheet" href="style.css">
 </head>
 
 <style>
@@ -139,6 +145,7 @@ input[type=submit] {
                 <input type="text" id="aligned-direccion" placeholder="Direcci&oacute;n"/>
                 <span class="pure-form-message-inline"></span>
             </div>
+
             <div class="pure-control-group">
                 <label for="aligned-telefono">Tel&eacute;fono</label>
                 <input type="text" id="aligned-telefono" placeholder="Tel&eacute;fono" maxlength="20"/>
@@ -152,6 +159,25 @@ input[type=submit] {
                     <option>Chile</option>
                 </select>
             </div>
+            <div class="wrapper">
+              <div class="values">
+                  <span id="range1">
+                      0
+                  </span>
+                  <span> &dash; </span>
+                  <span id="range2">
+                      100
+                  </span>
+              </div>
+              <div class="container">
+                  <div class="slider-track"></div>
+                  <input type="range" min="0" max="100" value="30" id="slider-1" oninput="slideOne()">
+                  <input type="range" min="0" max="100" value="70" id="slider-2" oninput="slideTwo()">
+              </div>
+          </div>
+          
+          <!--Script-->
+          <script src="script.js"></script>
             <div class="pure-controls">
                 <label for="aligned-cb" class="pure-checkbox">
                     <input type="checkbox" id="aligned-cb" /> He leido los terminos y condiciones
