@@ -34,7 +34,8 @@ input[type=submit] {
 }
 
 /* The message box is shown when the user clicks on the password field */
-#message {
+
+.mensaje {
   display:none;
   background: #f1f1f1;
   color: #000;
@@ -43,82 +44,10 @@ input[type=submit] {
   margin-top: 10px;
 }
 
-#message p {
+.mensaje p{
   padding: 10px 35px;
   font-size: 18px;
 }
-
-#message2 {
-  display:none;
-  background: #f1f1f1;
-  color: #000;
-  position: relative;
-  padding: 20px;
-  margin-top: 10px;
-}
-
-#message2 p {
-  padding: 10px 35px;
-  font-size: 18px;
-}
-
-#message3 {
-  display:none;
-  background: #f1f1f1;
-  color: #000;
-  position: relative;
-  padding: 20px;
-  margin-top: 10px;
-}
-
-#message3 p {
-  padding: 10px 35px;
-  font-size: 18px;
-}
-
-#message4 {
-  display:none;
-  background: #f1f1f1;
-  color: #000;
-  position: relative;
-  padding: 20px;
-  margin-top: 10px;
-}
-
-#message4 p {
-  padding: 10px 35px;
-  font-size: 18px;
-}
-
-#message5 {
-  display:none;
-  background: #f1f1f1;
-  color: #000;
-  position: relative;
-  padding: 20px;
-  margin-top: 10px;
-}
-
-#message5 p {
-  padding: 10px 35px;
-  font-size: 18px;
-}
-
-#message6 {
-  display:none;
-  background: #f1f1f1;
-  color: #000;
-  position: relative;
-  padding: 20px;
-  margin-top: 10px;
-}
-
-#message6 p {
-  padding: 10px 35px;
-  font-size: 18px;
-}
-
-
 
 /* Add a green text color and a checkmark when the requirements are right */
 .valid {
@@ -232,30 +161,30 @@ input[type=submit] {
             </div>
         </fieldset>
     </form>    
-    <div id="message">
+    <div id="message" class="mensaje">
         <h3>La contraseña debe contener lo siguiente:</h3>
         <p id="letter" class="invalid">Una letra <b>minuscula</b> </p>
         <p id="capital" class="invalid">Una letra <b>mayuscula</b></p>
         <p id="number" class="invalid">Un <b>numero</b></p>
         <p id="length" class="invalid">Minimo <b>15 caracteres</b> y maximo <b>20 caracteres</b></p>
     </div>
-    <div id="message2">
+    <div id="message2" class="mensaje">
         <h3>La contraseña debe contener lo siguiente:</h3>
         <p id="igual" class="invalid">La contrasena debe ser <b>Igual</b> a la anterior</p>
     </div>
-    <div id="message3">
+    <div id="message3" class="mensaje">
         <h3>La contraseña debe contener lo siguiente:</h3>
         <p id="email" class="invalid">El correo debe tener menos de <b>120 caracteres</b></p>
     </div>
-    <div id="message4">
+    <div id="message4" class="mensaje">
         <h3>El nombre debe contener lo siguiente:</h3>
         <p id="nombre" class="invalid">El nombre debe tener como maximo <b>25 caracteres</b></p>
     </div>
-    <div id="message5">
+    <div id="message5" class="mensaje">
         <h3>El apellido debe contener lo siguiente:</h3>
         <p id="apellido" class="invalid">El apellido debe tener como maximo <b>25 caracteres</b></p>
     </div>
-    <div id="message6">
+    <div id="message6" class="mensaje">
         <h3>La direccion debe contener lo siguiente:</h3>
         <p id="direccion" class="invalid">La direccion debe empezar con las siguientes palabras: <b>cll, cra, av, anv, trans</b></p>
     </div>
