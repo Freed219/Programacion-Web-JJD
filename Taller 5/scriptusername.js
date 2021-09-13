@@ -1,20 +1,19 @@
-var InputUsername = document.getElementById("aligned-user");
-var letter = document.getElementById("letter");
-var capital = document.getElementById("capital");
-var number = document.getElementById("number");
-var length = document.getElementById("length");
-var igual = document.getElementById("igual");
-var InputEmail = document.getElementById("aligned-email");
-var email = document.getElementById("email")
-
+var InputUsername = document.getElementById("aligned-username");
 InputUsername.onkeyup = function() {
     // Validate length
-    if(InputUsername.value.length >= 15 && InputUsername.value.length <=20) {
-      length.classList.remove("invalid");
-      length.classList.add("valid");
+    if(InputUsername.value.length >= 10 && InputUsername.value.length <=20) {
+      usuario.classList.remove("invalid");
+      usuario.classList.add("valid");
     }
     else {
-      length.classList.remove("valid");
-      length.classList.add("invalid");
+      usuario.classList.remove("valid");
+      usuario.classList.add("invalid");
     }
+  }
+  InputUsername.onfocus = function() {
+    document.getElementById("message7").style.display = "block";
+  }
+  
+  InputUsername.onblur = function() {
+    document.getElementById("message7").style.display = "none";
   }

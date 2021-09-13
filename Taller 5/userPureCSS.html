@@ -91,13 +91,13 @@ input[type=submit] {
             </div>
             <div class="pure-control-group">
                 <label for="aligned-name">Apellido</label>
-                <input type="text" id="aligned-surname" placeholder="Apellido" maxlength="25"/>
+                <input type="text" id="aligned-surname" placeholder="Apellido" maxlength="26"/>
                 <span class="pure-form-message-inline"></span>
             </div>
 
             <div class="pure-control-group">
                 <label for="aligned-name">Username</label>
-                <input type="text" id="aligned-username" placeholder="Username" required="" maxlength="20"/>
+                <input type="text" id="aligned-username" placeholder="Username" required="" maxlength="25"/>
                 <span class="pure-form-message-inline">*</span>
             </div>
             <div class="pure-control-group">
@@ -188,7 +188,10 @@ input[type=submit] {
         <h3>La direccion debe contener lo siguiente:</h3>
         <p id="direccion" class="invalid">La direccion debe empezar con las siguientes palabras: <b>cll, cra, av, anv, trans</b></p>
     </div>
-
+    <div id="message7" class="mensaje">
+        <h3>El usuario debe contener lo siguiente:</h3>
+        <p id="usuario" class="invalid">El usuario debe contener entre:<b>10 y 25 caracteres</b></p>
+    </div>
 
 </body>
 </html>
