@@ -5,6 +5,17 @@
 #backgroundfirst {
 background-color: #4b4b4b;
 padding: 40px;
+border-bottom-style: solid;
+border-width: 1px;
+border-color: #333333;
+}
+
+#backgroundmenu {
+    background-color: #838383;
+    border-bottom-style: solid;
+    border-width: 1px;
+    padding: 10px;
+    border-color: #555555;
 }
 
 .container {
@@ -17,25 +28,26 @@ background-color: #04AA6D;
 color: white;
 }
 
-body {background-color: rgb(231, 231, 231);}
-
-.l-box {
-    padding: 1em;
+body {
+    background-color: rgb(224, 224, 224);
 }
 
 .pure-g > div {
     box-sizing: border-box;
 }
 
-.l-box {
-    padding: 1em;
-}
 
 .footerbottom{
 background: #68ca6d;
 width: 100vw;
-padding: 20px 0;
+padding: 10px 0;
 text-align: center;
+border-top-style: solid;
+border-width: 1px;
+border-color: #039761;
+display: flex;
+align-items: center;
+justify-content: center
 }
 
 .footerbottom p{
