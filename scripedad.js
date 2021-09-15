@@ -1,6 +1,4 @@
-<html>
-  <script>
-    function formatDate(date){
+function formatDate(date){
     var d = new Date(date),
     month = '' + (d.getMonth()+1),
     day = '' + d.getDate(),
@@ -69,14 +67,3 @@ function getAgeVal(pid){
         return false;
     }
 }
-  </script>  
-<head>
-<body>
-<h3>Fecha nacimiento</h3>
-<label for="txtbirthdate">Fecha nacimiento</label>
-<input id="txtbirthdate" type="text" name="txtbirthdate" maxlength="10" placeholder="mm/dd/yyyy" onkeyup="getAgeVal(0)" onblur="getAgeVal(0)">
-<label for="txtage">Edad</label>
-<input type="text"name="txtage" id="txtage" autocomplete="off" disabled>
-
-</body>  
-</html>  
