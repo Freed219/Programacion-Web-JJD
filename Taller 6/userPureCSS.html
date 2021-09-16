@@ -9,6 +9,7 @@ crossorigin="anonymous">
 <script defer src='scriptusername.js'></script>
 <script defer src='scriptdatos.js'></script>
 <script defer src='fechas.js'></script>
+<script defer src='enfermedad.js'></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Double Range Slider</title>
 <!--Google Fonts-->
@@ -67,6 +68,13 @@ input[type=submit] {
   left: -35px;
   content: "✖";
 } 
+
+#aligned-enfermedad{
+    width: 700px;
+    height: 85px;
+    display: none;
+}
+
 </style>
 
 <body>
@@ -117,12 +125,18 @@ input[type=submit] {
                 <input type="email" id="aligned-email" placeholder="Correo electr&oacute;nico" required="" maxlength="130"/>
                 <span class="pure-form-message-inline">*</span>
             </div>
-          
-
-          
-            <div class="pure-controls">
+            <div class="pure-control-group">
+                <label for="aliganed-enfermedad">He sufrido de enfermedades recientemente.</label>
+                <select id="box"name="select">
+                    <option value="valor-0" selected>...</option>
+                    <option value="valor-si">Si</option>
+                    <option value="valor-no">No</option>
+                </select>
+            </div>
+                    
+            <div class="pure-controls">              
                 <label for="aligned-cb" class="pure-checkbox">
-                    <input type="checkbox" id="aligned-cb" /> He leido los terminos y condiciones
+                    <input type="checkbox" id="aligned-cb" /> He leido los terminos y condiciones.
                 </label>
                 <button type="submit" class="pure-button pure-button-primary">Submit</button>
             </div>
@@ -154,6 +168,15 @@ input[type=submit] {
     <div id="message7" class="mensaje">
         <h3>El usuario debe contener lo siguiente:</h3>
         <p id="usuario" class="invalid">El usuario debe contener entre:<b>10 y 25 caracteres</b></p>
+    </div>
+    <div id="message8" class="mensaje">
+        <h3>¿Es alguna de estas enfermedades contagiosas?:</h3>
+        <p><input type="checkbox" id="aligned-cb" />Dengue </p>
+        <p><input type="checkbox" id="aligned-cb" />Fiebre Amarilla.</p>
+        <p><input type="checkbox" id="aligned-cb" />Malaria. </p>
+        <p><input type="checkbox" id="aligned-cb" />Coronavirus. </p>
+        <p><input type="checkbox" id="checkbox-contagiosa" />Otra. </p>     
+        <input type="text" id="aligned-enfermedad" placeholder="Describa la enfermedad" maxlength="200"/>
     </div>
 </body>
 </html>
