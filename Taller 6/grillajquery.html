@@ -14,16 +14,15 @@
     <script type="text/javascript">
         $(document).ready(function () {
             var grid = $('#grid').grid({
+                primaryKey: 'id',
                 dataSource: 'https://jsonplaceholder.typicode.com/users',
                 columns: [
                     { field: 'id', width: 100 },
-                    { field: 'name', sortable: true },
-                    { field: 'username'},
-                    { field: 'email'},
-                    { field: 'address'},
-                    { field: 'phone'},
-                    { field: 'website'},
-                    { field: 'company'}
+                    { field: 'name', title: 'Nombre', sortable: true},
+                    { field: 'username', title: 'Usuario', sortable: true},
+                    { field: 'email', title: 'Correo'},
+                    { field: 'phone', title: 'Telefono'},
+                    { field: 'website', title: 'Sitio Web'}
                 ],
                 pager: { limit: 5 }
             });
