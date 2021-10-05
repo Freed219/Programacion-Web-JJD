@@ -1,4 +1,5 @@
 var InputUsername = document.getElementById("aligned-username");
+
 InputUsername.onkeyup = function() {
     // Validate length
     if(InputUsername.value.length >= 10 && InputUsername.value.length <=20) {

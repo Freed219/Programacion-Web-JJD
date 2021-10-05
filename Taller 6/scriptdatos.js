@@ -1,7 +1,5 @@
 var InputNombre = document.getElementById("aligned-name");
 var InputApellido = document.getElementById("aligned-surname");
-var InputDireccion = document.getElementById("aligned-direccion");
-
 
 InputNombre.onfocus = function() {
   document.getElementById("message4").style.display = "block";
@@ -38,25 +36,5 @@ InputApellido.onkeyup = function() {
   else {
    apellido.classList.remove("valid");
    apellido.classList.add("invalid");
-  }
-}
-
-InputDireccion.onfocus = function() {
-  document.getElementById("message6").style.display = "block";
-}
-
-InputDireccion.onblur = function() {
-  document.getElementById("message6").style.display = "none";
-}
-
-InputDireccion.onkeyup = function() {
-  var carreteras = /^(cll|cra|av|anv|trans)/gi;
-  if(InputDireccion.value.match(carreteras)) {
-   direccion.classList.remove("invalid");
-   direccion.classList.add("valid");
-  }
-  else {
-   direccion.classList.remove("valid");
-   direccion.classList.add("invalid");
   }
 }

@@ -69,15 +69,15 @@ InputConfirmarPassword.onblur = function() {
   document.getElementById("message2").style.display = "none";
 }
 
-InputConfirmarPassword.onkeyup = function() {
-  var pw1 = document.getElementById("aligned-password");
-  var pw2 = document.getElementById("aligned-confirmarpassword");
-  if(pw2 = pw1) {
-      igual.classList.remove("invalid");
-      igual.classList.add("valid");
-    } else {
-      igual.classList.remove("valid");
-      igual.classList.add("invalid");
+InputConfirmarPassword.onkeyup = function () {
+  var ip = document.getElementById("aligned-password");
+  var icp = document.getElementById("aligned-confirmarpassword");
+  if (icp.value != ip.value) {
+    igual.classList.remove("valid");
+    igual.classList.add("invalid");
+  } else {
+    igual.classList.remove("invalid");
+    igual.classList.add("valid");
   }
 }
 
