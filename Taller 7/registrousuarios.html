@@ -1,7 +1,6 @@
 <html xmlns="http://www.uis.edu.co" lang="es" xml:lang="es">
 
 <head>
-
     <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css"
         integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
     <title>Complete los Siguientes Datos</title>
@@ -10,9 +9,7 @@
     <script defer src='scriptdatos.js'></script>
     <script defer src='fechas.js'></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Google Fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
-    <!--Stylesheet-->
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
     </script>
@@ -85,7 +82,7 @@
     }
 </style>
 
-<body> 
+<body>
     <form id='form' class="pure-form pure-form-stacked">
         <label>
             <h2>Registro de usuarios</h2>
@@ -112,8 +109,8 @@
             </div>
             <div class="pure-control-group">
                 <label for="txtbirthdate">Fecha nacimiento</label>
-                <input id="txtbirthdate" type="text" name="txtbirthdate" maxlength="10" placeholder="mm/dd/yyyy"
-                    onkeyup="getAgeVal(0)" onblur="getAgeVal(0)">
+                <input id="txtbirthdate" type="text" maxlength="10" placeholder="mm/dd/yyyy" onkeyup="getAgeVal(0)"
+                    onblur="getAgeVal(0)">
             </div>
             <div class="pure-control-group">
                 <label for="txtage">Edad</label>
@@ -163,13 +160,13 @@
             </div>
             <div class="pure-control-group">
                 <label for="departamento">Departamento: *</label>
-                <select class="browser-default" name="departamento" id="departamento" required="">
+                <select class="browser-default" id="departamento" required="">
                     <option value="">Seleccione...</option>
                 </select>
             </div>
             <div class="pure-control-group">
                 <label for="municipio">Municipio: *</label>
-                <select class="browser-default" name="municipio" id="municipio" required="">
+                <select class="browser-default" id="municipio" required="">
                     <option value="">Seleccione...</option>
                 </select>
             </div>
