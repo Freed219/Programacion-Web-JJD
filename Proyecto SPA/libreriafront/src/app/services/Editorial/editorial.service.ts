@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class EditorialService {
-  private API_SERVER ="http://localhost:4200/";
+  private API_SERVER ="http://localhost:8080/editorial/";
   constructor(
     private httpClient: HttpClient
   ) { }

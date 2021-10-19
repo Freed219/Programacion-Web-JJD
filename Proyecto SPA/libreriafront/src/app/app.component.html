@@ -20,7 +20,7 @@
     <div>
     <label>Editorial</label>
     <select type="text"formControlName="editorial" class="form-control">
-      <option value="item.id" *ngFor="let item of editorial"></option>
+      <option value="item.id" *ngFor="let item of editorial">{{item.nombre}}</option>
     </select>
     </div>
       <button type="submit" class="btn btn-primary">guardar</button>
