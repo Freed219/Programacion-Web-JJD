@@ -9,9 +9,12 @@ import { LibroService } from './services/Libro/libro.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
+  title(title: any) {
+    throw new Error('Method not implemented.');
+  }
   
-  autorForm: FormGroup;
-
+  LibroForm: FormGroup;
+  editorial: any;
 
 constructor(
   public fb: FormBuilder,
@@ -22,12 +25,24 @@ constructor(
 
 }
 ngOnInit(): void {
-  this.autorForm = this.fb.group({
+  this.LibroForm = this.fb.group({
   nombre : ['', Validators.required],
-  id : ['',Validators.required],
+  paginas : ['',Validators.required],
+  year_creacion : ['',Validators.required],
+  autor : ['',Validators.required],
+  editorial : ['',Validators.required],
  
 
-})
+});;
+this.editorialService.getAlleditoriales().subscribe(resp=>{
+  this.editorial = resp;
+  console.log(resp);
+},
+  error => {console.error(error)}
+)
+
+
+
 }
 guardar(): void{
   
