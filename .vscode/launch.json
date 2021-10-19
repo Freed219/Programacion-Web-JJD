@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-LibreriabackendApplication<libreriabackend>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "xyz.grupojdd.libreriabackend.LibreriabackendApplication",
+            "projectName": "libreriabackend",
+            "args": ""
+        }
+    ]
+}
