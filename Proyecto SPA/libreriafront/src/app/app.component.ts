@@ -39,12 +39,17 @@ this.editorialService.getAllEditoriales().subscribe(resp=>{
   console.log(resp);
 },
   error => {console.error(error)}
-)
+);
 
 
 
 }
 guardar(): void{
-  
+  this.libroService.saveLibro(this.LibroForm.value).subscribe(resp=>{
+
+  },
+  error => {console.error(error)}
+  )
 }
 }
+
