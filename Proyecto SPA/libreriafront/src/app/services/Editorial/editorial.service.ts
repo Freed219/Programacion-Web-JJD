@@ -10,7 +10,7 @@ export class EditorialService {
   constructor(
     private httpClient: HttpClient
   ) { }
-  public getAlleditoriales(): Observable<any>{
+  public getAllEditoriales(): Observable<any>{
     return this.httpClient.get(this.API_SERVER);
   }
 }

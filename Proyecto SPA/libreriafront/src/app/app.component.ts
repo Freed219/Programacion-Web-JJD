@@ -34,7 +34,7 @@ ngOnInit(): void {
  
 
 });;
-this.editorialService.getAlleditoriales().subscribe(resp=>{
+this.editorialService.getAllEditoriales().subscribe(resp=>{
   this.editorial = resp;
   console.log(resp);
 },
