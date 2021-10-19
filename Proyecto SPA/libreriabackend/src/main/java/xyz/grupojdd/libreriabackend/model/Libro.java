@@ -1,5 +1,10 @@
 package xyz.grupojdd.libreriabackend.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table (name = "libro")
 public class Libro {
 
     private int id;
