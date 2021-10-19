@@ -159,8 +159,7 @@ public class AutorService implements AutorRepository{
 
     @Override
     public <S extends Autor> S save(S entity) {
-        // TODO Auto-generated method stub
-        return null;
+        return autorRepository.save(entity);
     }
 
     @Override

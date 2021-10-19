@@ -159,8 +159,7 @@ public class LibroService implements LibroRepository{
 
     @Override
     public <S extends Libro> S save(S entity) {
-        // TODO Auto-generated method stub
-        return null;
+        return libroRepository.save(entity);
     }
 
     @Override
