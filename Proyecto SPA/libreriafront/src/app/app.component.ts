@@ -16,6 +16,7 @@ export class AppComponent implements OnInit {
   LibroForm: FormGroup;
   editorial: any;
   autor: any;
+  libro: any;
 
   constructor(
     public fb: FormBuilder,
@@ -43,6 +44,13 @@ export class AppComponent implements OnInit {
 
     this.autorService.getAllAutores().subscribe(resp => {
       this.autor = resp;
+      console.log(resp);
+    },
+      error => { console.error(error) }
+    );
+
+    this.libroService.getAllLibros().subscribe(resp => {
+      this.libro = resp;
       console.log(resp);
     },
       error => { console.error(error) }
