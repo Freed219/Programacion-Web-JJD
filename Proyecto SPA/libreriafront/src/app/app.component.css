@@ -1,5 +1,64 @@
-.formularioRegistro{
-    padding-left: 30%;
+
+body{
+    font-family: 'Arimo', sans-serif;
+    font-size: 20px;
+    background-color: saddlebrown;
+    padding-bottom: 20%;
+}
+tbody{
+    background-color: saddlebrown;
+}
+.nav{
+    font-family: 'Bebas Neue', cursive;
+    text-shadow: 2px 5px 5px grey;
+    background-color: black;
+    color: white;
+    padding: 1%;
+    padding-left: 0.8%;
+}
+h1{
+    size: 30px;
+    text-shadow: 5px 3px 6px rgb(26, 25, 25);
+    margin-bottom: 1%;
+    padding-left: 35%;
+}
+span{
+    size: 20px;
+    color: darkmagenta;
+    margin-left: 85%;
+}
+input, select{
+    margin: 1%;
+    margin-left: 1.2%;
+    box-shadow: 2px 2px 5px black;
+    background-color: burlywood;
+    border-color: black;
+    color: black;
+}
+.formularioRegistro{  
+    padding-left: 20%;
     padding-right: 20%;
-    margin-top: 10%;
+    padding-top: 3%;
+    padding-bottom: 1%;
+}
+
+.formularioVisualizacion{
+    padding-left: 19%;
+    padding-right: 19%;
+}
+
+button{
+    box-shadow: 2px 2px 5px black;
+    background-color: burlywood;
+    border-color: black;
+    color: black;
+}
+
+#guardarbtn{
+    background-color: burlywood;
+    color: black;
+    border-color: black;
+    margin-top: 1.5%;
+    margin-left: 86%;
+    width: 15%;
 }

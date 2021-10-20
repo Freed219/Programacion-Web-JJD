@@ -1,36 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta name="viewport" charset="utf-8" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="viewport"
+      charset="utf-8"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arimo&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <title>Libreria</title>
+  </head>
+
+<body>
+<div class="nav">
+  <h2>Libreria pacomemo</h2>
+  <span>WEB-JJD</span>
+</div>
 <div class="formularioRegistro">
-  <h2>Registro Libro</h2>
+  <h1>Registro de Libro</h1>
   <form [formGroup]="LibroForm" (ngSubmit)="guardar()">
     <div class="form-group">
-      <label>Nombre</label>
+      <label>Nombre:</label>
       <input type="text" formControlName="nombre" class="form-control">
     </div>
     <div class="form-group">
-      <label>Paginas</label>
+      <label>Paginas:</label>
       <input type="number" formControlName="paginas" class="form-control">
     </div>
     <div class="form-group">
-      <label>Año creacion</label>
+      <label>Año creacion:</label>
       <input type="number" formControlName="year_creacion" class="form-control">
     </div>
     <div>
-      <label>Autor</label>
+      <label>Autor:</label>
       <select type="text" formControlName="autor" class="form-control">
         <option [ngValue]="item" *ngFor="let item of autor">{{item.nombre}}</option>
       </select>
     </div>
     <div>
-      <label>Editorial</label>
+      <label>Editorial:</label>
       <select type="text" formControlName="editorial" class="form-control">
         <option [ngValue]="item" *ngFor="let item of editorial">{{item.nombre}}</option>
       </select>
     </div>
-    <button type="submit" class="btn btn-primary" [disabled]="LibroForm.invalid">guardar</button>
+    <button type="submit" class="btn btn-primary" [disabled]="LibroForm.invalid" id="guardarbtn">Guardar</button>
   </form>
 </div>
 
-<div class="formularioRegistro">
-<h2>Libros Registrados</h2>
+<div class="formularioVisualizacion">
+<h1>Libros Registrados</h1>
 <div>
   <table class="table">
     <thead>
@@ -62,5 +83,7 @@
   </table>
 </div>
 </div>
-
+</body>
 <router-outlet></router-outlet>
+
+
