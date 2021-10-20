@@ -61,6 +61,7 @@ export class AppComponent implements OnInit {
   guardar(): void {
     this.libroService.saveLibro(this.LibroForm.value).subscribe(resp => {
       this.LibroForm.reset();
+      this.libro.push(resp);
     },
       error => { console.error(error) }
     )
