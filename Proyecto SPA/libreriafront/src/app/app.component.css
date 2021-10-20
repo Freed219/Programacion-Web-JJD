@@ -1,37 +1,43 @@
 
 body{
-    font-family: 'Arimo', sans-serif;
+    
+    font-family: 'Lato', sans-serif;
     font-size: 20px;
-    background-color: saddlebrown;
+    background-color: rgb(170, 79, 13);
     padding-bottom: 20%;
 }
 tbody{
-    background-color: saddlebrown;
+    background-color: rgb(170, 79, 13);
 }
 .nav{
-    font-family: 'Bebas Neue', cursive;
-    text-shadow: 2px 5px 5px grey;
-    background-color: black;
-    color: white;
+    font-family: 'Arimo', sans-serif;
+    background-color: rgb(255, 221, 177);
+    color: black;
     padding: 1%;
-    padding-left: 0.8%;
+    padding-left: 3%;
+    border-bottom: 5px solid black;
 }
+h2{
+    margin-left: 1.5%;
+}
+
 h1{
     size: 30px;
-    text-shadow: 5px 3px 6px rgb(26, 25, 25);
     margin-bottom: 1%;
     padding-left: 35%;
 }
 span{
     size: 20px;
-    color: darkmagenta;
-    margin-left: 85%;
+    color: black;
+    padding-top: 0.5%;
+    margin-left: 63.7%;
+    margin-right: 1.5%;
 }
-input, select{
+input, select, table{
     margin: 1%;
     margin-left: 1.2%;
     box-shadow: 2px 2px 5px black;
-    background-color: burlywood;
+    background-color: rgb(255, 221, 177);
     border-color: black;
     color: black;
 }
@@ -49,13 +55,13 @@ input, select{
 
 button{
     box-shadow: 2px 2px 5px black;
-    background-color: burlywood;
+    background-color: rgb(255, 221, 177);
     border-color: black;
     color: black;
 }
 
 #guardarbtn{
-    background-color: burlywood;
+    background-color: rgb(255, 234, 208);
     color: black;
     border-color: black;
     margin-top: 1.5%;
