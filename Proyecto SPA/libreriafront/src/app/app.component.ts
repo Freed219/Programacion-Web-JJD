@@ -15,6 +15,7 @@ export class AppComponent implements OnInit {
 
   LibroForm: FormGroup;
   editorial: any;
+  autor: any;
 
   constructor(
     public fb: FormBuilder,
@@ -31,9 +32,8 @@ export class AppComponent implements OnInit {
       year_creacion: ['', Validators.required],
       autor: ['', Validators.required],
       editorial: ['', Validators.required],
-
-
     });;
+
     this.editorialService.getAllEditoriales().subscribe(resp => {
       this.editorial = resp;
       console.log(resp);
@@ -41,17 +41,22 @@ export class AppComponent implements OnInit {
       error => { console.error(error) }
     );
 
-    this.LibroForm.get('editorial').valueChanges.subscribe(value => {
-
-    })
+    this.autorService.getAllAutores().subscribe(resp => {
+      this.autor = resp;
+      console.log(resp);
+    },
+      error => { console.error(error) }
+    );
 
   }
+
   guardar(): void {
     this.libroService.saveLibro(this.LibroForm.value).subscribe(resp => {
-
+      this.LibroForm.reset();
     },
       error => { console.error(error) }
     )
   }
+
 }
 
