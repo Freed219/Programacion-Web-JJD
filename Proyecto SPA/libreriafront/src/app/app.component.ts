@@ -8,48 +8,50 @@ import { LibroService } from './services/Libro/libro.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   title(title: any) {
     throw new Error('Method not implemented.');
   }
-  
+
   LibroForm: FormGroup;
   editorial: any;
 
-constructor(
-  public fb: FormBuilder,
-  public autorService: AutorService,
-  public editorialService: EditorialService,
-  public libroService: LibroService
-){
+  constructor(
+    public fb: FormBuilder,
+    public autorService: AutorService,
+    public editorialService: EditorialService,
+    public libroService: LibroService
+  ) {
 
-}
-ngOnInit(): void {
-  this.LibroForm = this.fb.group({
-  nombre : ['', Validators.required],
-  paginas : ['',Validators.required],
-  year_creacion : ['',Validators.required],
-  autor : ['',Validators.required],
-  editorial : ['',Validators.required],
- 
-
-});;
-this.editorialService.getAllEditoriales().subscribe(resp=>{
-  this.editorial = resp;
-  console.log(resp);
-},
-  error => {console.error(error)}
-);
+  }
+  ngOnInit(): void {
+    this.LibroForm = this.fb.group({
+      nombre: ['', Validators.required],
+      paginas: ['', Validators.required],
+      year_creacion: ['', Validators.required],
+      autor: ['', Validators.required],
+      editorial: ['', Validators.required],
 
 
+    });;
+    this.editorialService.getAllEditoriales().subscribe(resp => {
+      this.editorial = resp;
+      console.log(resp);
+    },
+      error => { console.error(error) }
+    );
 
-}
-guardar(): void{
-  this.libroService.saveLibro(this.LibroForm.value).subscribe(resp=>{
+    this.LibroForm.get('editorial').valueChanges.subscribe(value => {
 
-  },
-  error => {console.error(error)}
-  )
-}
+    })
+
+  }
+  guardar(): void {
+    this.libroService.saveLibro(this.LibroForm.value).subscribe(resp => {
+
+    },
+      error => { console.error(error) }
+    )
+  }
 }
 

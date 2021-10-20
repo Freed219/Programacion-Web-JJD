@@ -26,5 +26,32 @@
     <button type="submit" class="btn btn-primary">guardar</button>
   </form>
 </div>
+<<<<<<< HEAD
 
 <router-outlet></router-outlet>
+=======
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Numero de Paginas</th>
+        <th>año creacion</th>
+        <th>editorial</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of Libro">
+        <th>{{item.id}}</th>
+        <th>{{item.nombre}}</th>
+        <th>{{item.paginas}}</th>
+        <th>{{item.year_creacion}}</th>
+        <th>{{item.editorial.nombre}}</th>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<router-outlet></router-outlet>
+>>>>>>> ca63b0a83ba26ab5a6845e6c1e955f4d312af5c8
