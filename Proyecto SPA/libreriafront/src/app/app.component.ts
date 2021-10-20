@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
   LibroForm: FormGroup;
   editorial: any;
   autor: any;
-  libro: any;
+  libros: any;
 
   constructor(
     public fb: FormBuilder,
@@ -28,6 +28,7 @@ export class AppComponent implements OnInit {
   }
   ngOnInit(): void {
     this.LibroForm = this.fb.group({
+      id: [''],
       nombre: ['', Validators.required],
       paginas: ['', Validators.required],
       year_creacion: ['', Validators.required],
@@ -37,21 +38,18 @@ export class AppComponent implements OnInit {
 
     this.editorialService.getAllEditoriales().subscribe(resp => {
       this.editorial = resp;
-      console.log(resp);
     },
       error => { console.error(error) }
     );
 
     this.autorService.getAllAutores().subscribe(resp => {
       this.autor = resp;
-      console.log(resp);
     },
       error => { console.error(error) }
     );
 
     this.libroService.getAllLibros().subscribe(resp => {
-      this.libro = resp;
-      console.log(resp);
+      this.libros = resp;
     },
       error => { console.error(error) }
     );
@@ -61,9 +59,31 @@ export class AppComponent implements OnInit {
   guardar(): void {
     this.libroService.saveLibro(this.LibroForm.value).subscribe(resp => {
       this.LibroForm.reset();
-      this.libro.push(resp);
+      this.libros=this.libros.filter(libro=> resp.id!==libro.id);
+      this.libros.push(resp);
     },
       error => { console.error(error) }
+    )
+  }
+
+  eliminar(libro){
+    this.libroService.deleteLibro(libro.id).subscribe(resp=>{
+      if(resp===true){
+        this.libros.pop(libro)
+      }
+    })
+  }
+
+  editar(libro){
+    this.LibroForm.setValue(
+      {
+        id: libro.id,
+        nombre: libro.nombre,
+        paginas: libro.paginas,
+        year_creacion: libro.year_creacion,
+        autor: libro.autor,
+        editorial: libro.editorial,
+      }
     )
   }
 

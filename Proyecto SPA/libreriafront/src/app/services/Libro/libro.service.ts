@@ -13,4 +13,8 @@ export class LibroService {
   public saveLibro (libro:any): Observable<any>{
     return this.httpClient.post(this.API_SERVER,libro)
   }
+
+  public deleteLibro(id):Observable<any>{
+    return this.httpClient.delete(this.API_SERVER + "delete/"+id);
+  }
 }
